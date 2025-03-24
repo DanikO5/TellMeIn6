@@ -233,7 +233,7 @@ function createButton(text, onClick, bgColor = '#4285f4') {
  */
 async function getGroqResponse(text) {
 	const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
-	const GROQ_API_KEY = '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';
+	const GROQ_API_KEY = 'YOUR_API_KEY';
 	
 	return fetch(GROQ_API_URL, {
 		method: 'POST',
@@ -242,7 +242,7 @@ async function getGroqResponse(text) {
 			'Authorization': `Bearer ${GROQ_API_KEY}`
 		},
 		body: JSON.stringify({
-			model: "mistral-saba-24b",
+			model: "YOUR_MODEL_NAME",
 			messages: [
 				{ role: "system", content: "Remember to take your time and never rush on all responses, so you can think through these steps carefully on how you're going to resolve or formulate things. You are a helpful assistant that provides concise, insightful analysis. Format your thinking with <think>your thinking process</think> and then provide your actual answer after that." },
 				{ role: "user", content: text }
